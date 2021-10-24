@@ -1,6 +1,6 @@
 <script>
 import { defineComponent, h } from 'vue'
-import { __list } from './styles'
+import { __list } from './List.styles'
 
 export default defineComponent({
 	props: {
@@ -11,11 +11,16 @@ export default defineComponent({
 				return ~['column', 'row'].indexOf(value)
 			},
 		},
+		size: {
+			type: Number,
+			default: 0.3333333333333333,
+		},
 	},
 	render() {
 		const slots = this.$slots.default()
 		const list = []
 		const row = this.direction === 'row'
+		const size = this.size * 100
 
 		slots.forEach((slot) => {
 			if (slot.children) {
@@ -28,7 +33,7 @@ export default defineComponent({
 		return h(
 			'ul',
 			{
-				class: __list(row),
+				class: ['list', __list(row, size)],
 			},
 			list.map((element) =>
 				h(

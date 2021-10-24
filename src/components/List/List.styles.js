@@ -1,7 +1,7 @@
 import { css } from '@emotion/css'
 import tw from 'twin.macro'
 
-export const __list = (row) => css`
+export const __list = (row, size) => css`
 	${tw`
     flex flex-wrap items-start
     p-2
@@ -10,7 +10,7 @@ export const __list = (row) => css`
 
 	.list {
 		&__item {
-			flex-basis: 33.33%;
+			flex-basis: ${size}%;
 			${tw`
         flex-grow flex-shrink
         p-2

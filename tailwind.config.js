@@ -8,7 +8,4 @@ module.exports = {
 		extend: {},
 	},
 	plugins: [],
-	xwind: {
-		mode: 'objectstyles',
-	},
 }
