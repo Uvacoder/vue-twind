@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@emotion/css": "^11.5.0",
+    "@heroicons/vue": "^1.0.5",
     "vue": "^3.2.16"
   },
   "devDependencies": {
