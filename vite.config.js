@@ -1,17 +1,17 @@
-import { defineConfig } from "vite";
-import path from "path";
-import vue from "@vitejs/plugin-vue";
-import vueJsx from "@vitejs/plugin-vue-jsx";
-import macrosPlugin from "vite-plugin-babel-macros";
+import { defineConfig } from 'vite'
+import Vue from '@vitejs/plugin-vue'
+import VueJsx from '@vitejs/plugin-vue-jsx'
+import BabelMacros from 'vite-plugin-babel-macros'
+import path from 'path'
 
 export default defineConfig({
   server: {
-    port: "4000",
+    port: '4000',
   },
-  plugins: [vue(), vueJsx(), macrosPlugin()],
+  plugins: [Vue(), VueJsx(), BabelMacros()],
   resolve: {
     alias: {
-      "~": path.resolve(__dirname, "/src"),
+      '~': path.resolve(__dirname, '/src'),
     },
   },
-});
+})

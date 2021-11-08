@@ -8,7 +8,6 @@ export const __card = (children) => css`
     p-5
     text-white
     overflow-hidden
-    cursor-pointer
   `};
   min-width: 300px;
   min-height: 224px;

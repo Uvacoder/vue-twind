@@ -18,9 +18,9 @@
 </template>
 
 <script setup>
-import { useSlots } from "vue";
-import Icon from "~/components/Icon/Icon.vue";
-import { __card } from "./Card.styles";
+import { useSlots } from 'vue'
+import Icon from '~/components/Icon/Icon.vue'
+import { __card } from './Card.styles'
 
 const props = defineProps({
   title: {
@@ -35,7 +35,9 @@ const props = defineProps({
     type: String,
     required: false,
   },
-});
-const slots = useSlots();
-const children = slots.default().find((child) => typeof child.key === "number");
+})
+const slots = useSlots()
+const children = slots.default
+  ? slots.default().find((child) => typeof child.key === 'number')
+  : null
 </script>

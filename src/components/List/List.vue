@@ -1,5 +1,5 @@
 <script>
-import { defineComponent, h } from 'vue'
+import { defineComponent, Fragment, h } from 'vue'
 import { __list } from './List.styles'
 
 const SIZE = {
@@ -35,7 +35,9 @@ export default defineComponent({
     }
 
     slots.forEach((slot) => {
-      if (slot.children) {
+      const loop = typeof slot.type === 'symbol'
+
+      if (loop) {
         return slot.children.forEach((child) => list.push(child))
       }
 
