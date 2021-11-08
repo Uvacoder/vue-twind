@@ -1,12 +1,12 @@
-<script setup>
-import List from "~/components/List/List.vue";
-import Card from "~/components/Card/Card.vue";
-import Icon from "~/components/Icon/Icon.vue";
-import { cards } from "./App.data";
-</script>
-
 <template>
-  <List>
+  <List
+    :size="{
+      sm: 1 / 1,
+      md: 1 / 2,
+      lg: 1 / 3,
+      xl: 1 / 3,
+    }"
+  >
     <Card
       v-for="card in cards"
       :key="card.id"
@@ -18,3 +18,9 @@ import { cards } from "./App.data";
     </Card>
   </List>
 </template>
+
+<script setup>
+import List from '~/components/List/List.vue'
+import Card from '~/components/Card/Card.vue'
+import { cards } from './App.data'
+</script>
