@@ -1,9 +1,23 @@
 import { createApp } from 'vue'
+import { setup } from 'twind/shim'
+import { tw } from 'twind'
 import App from './App.vue'
 
-import { __global } from './styles/globals'
-import './styles/core.css'
+setup({
+  purge: ['./index.html', './src/**/*.{vue,js,jsx}'],
+  darkMode: false,
+  mode: 'silent',
+  theme: {
+    extend: {},
+  },
+  variants: {
+    extend: {},
+  },
+  plugins: [],
+})
 
-__global()
+const app = createApp(App)
 
-createApp(App).mount('#app')
+app.config.globalProperties.$tw = tw
+
+app.mount('#app')

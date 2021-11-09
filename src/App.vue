@@ -1,6 +1,8 @@
 <template>
+  <Styles />
+
   <div class="container py-10 mx-auto">
-    <h2 class="px-6">Cards</h2>
+    <h2 class="text-title px-6">Cards</h2>
 
     <List
       :size="{
@@ -22,7 +24,7 @@
     </List>
 
     <div class="px-6 mt-10">
-      <h2>Buttons</h2>
+      <h2 class="text-title">Buttons</h2>
 
       <List
         :size="{
@@ -39,6 +41,7 @@
 </template>
 
 <script setup>
+import Styles from '~/components/Styles/Styles.vue'
 import List from '~/components/List/List.vue'
 import Card from '~/components/Card/Card.vue'
 import Button from '~/components/Button/Button.vue'

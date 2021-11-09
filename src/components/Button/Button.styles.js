@@ -1,6 +1,17 @@
-import { css } from '@emotion/css'
-import tw from 'twin.macro'
+import { css, apply } from 'twind/css'
 
-export const __button = css`
-  ${tw`py-2 px-4 bg-blue-500 shadow-md hover:shadow-sm rounded text-white transform hover:translate-y-2 hover:translate-x-2 transition-all`};
-`
+export const __button = (primary) => {
+  const theme = primary ? 'blue' : 'purple'
+
+  return css`
+    ${apply`
+      py-2
+      px-4
+      bg-${theme}-500 hover:bg-${theme}-700
+      shadow-md hover:shadow-sm
+      rounded
+      text-white
+    `};
+    text-decoration: ${primary ? 'none' : 'underline'};
+  `
+}

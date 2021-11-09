@@ -1,5 +1,6 @@
 <script>
-import { defineComponent, Fragment, h } from 'vue'
+import { defineComponent, h } from 'vue'
+
 import { __list } from './List.styles'
 
 const SIZE = {
@@ -47,7 +48,7 @@ export default defineComponent({
     return h(
       'ul',
       {
-        class: ['list', __list(row, size)],
+        class: ['list', this.$tw(__list(row, size))],
       },
       list.map((element) =>
         h(

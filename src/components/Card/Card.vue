@@ -1,9 +1,9 @@
 <template>
-  <div class="card" :class="__card(children)">
-    <div class="card__front">
+  <div class="card group" :class="$tw(__card)">
+    <div :class="$tw(__front(children))">
       <div class="card__info">
-        <h3>{{ title }}</h3>
-        <h5 v-if="subtitle">{{ subtitle }}</h5>
+        <h3 class="text-subtitle">{{ title }}</h3>
+        <p class="text-base" v-if="subtitle">{{ subtitle }}</p>
       </div>
 
       <i v-if="icon" class="card__icon">
@@ -11,7 +11,7 @@
       </i>
     </div>
 
-    <div v-if="children" class="card__back">
+    <div v-if="children" :class="$tw(__back(children))">
       <slot />
     </div>
   </div>
@@ -20,7 +20,8 @@
 <script setup>
 import { useSlots } from 'vue'
 import Icon from '~/components/Icon/Icon.vue'
-import { __card } from './Card.styles'
+
+import { __card, __front, __back } from './Card.styles'
 
 const props = defineProps({
   title: {
