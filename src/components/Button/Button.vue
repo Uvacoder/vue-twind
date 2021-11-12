@@ -1,17 +1,16 @@
 <template>
-  <button :class="$tw(__button(primary))" @click="toggle">
+  <button :class="$tw(__button({ full }))">
     <slot />
   </button>
 </template>
 
 <script setup>
-import { ref } from 'vue'
-
 import { __button } from './Button.styles.js'
 
-const primary = ref(false)
-
-const toggle = () => {
-  primary.value = !primary.value
-}
+const props = defineProps({
+  full: {
+    type: Boolean,
+    default: false,
+  },
+})
 </script>

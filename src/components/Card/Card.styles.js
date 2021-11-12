@@ -1,26 +1,11 @@
 import { css, apply } from 'twind/css'
-
-const side = css`
-  flex-basis: 100%;
-  ${apply`
-    flex-grow
-    flex-shrink-0
-    p-5
-    shadow-md
-    rounded-lg
-    transform-gpu
-    transition-transform
-  `};
-`
+import { _mutable, _side } from '~/styles/mixins'
 
 export const __card = css`
   ${apply`
     w-full
     flex
-    p-5
-    text-white
-    overflow-hidden
-    group
+    p-3
   `};
   min-width: 300px;
   min-height: 224px;
@@ -38,38 +23,29 @@ export const __card = css`
 `
 
 export const __front = (children) => css`
-  ${side}
+  ${_mutable()}
+  ${_side}
+
   ${apply`
     flex
     flex-col
     justify-between
     relative
-    bg-purple-500
     z-10
 
-    ${
-      children &&
-      `
-        group-hover:translate-y-3
-        group-hover:-translate-x-3
-        group-hover:z-0
-      `
-    }
+    ${children && `group-hover:(-translate-x-3 translate-y-3 z-0)`}
   `};
 `
 
 export const __back = (children) => css`
-  ${side}
-  ${apply`
-    bg-blue-500
+  ${_mutable({ invert: true })}
+  ${_side}
 
-    ${
-      children &&
-      `
-        group-hover:-translate-y-0
-        group-hover:-translate-x-full
-      `
-    }
+  ${apply`
+    -left-3
+    -translate-x-full
+    translate-y-3
+
+    ${children && `group-hover:(left-0 -translate-x-full -translate-y-0)`}
   `};
-  transform: translate(calc(-100% - 0.75rem), 0.75rem);
 `

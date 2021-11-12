@@ -3,14 +3,15 @@
 </template>
 
 <script setup>
-import * as icons from "@heroicons/vue/outline";
+import { computed } from 'vue'
+import * as icons from '@heroicons/vue/outline'
 
 const props = defineProps({
   icon: {
     type: String,
     required: true,
   },
-});
+})
 
-const Icon = icons[props.icon];
+const Icon = computed(() => icons[props.icon])
 </script>

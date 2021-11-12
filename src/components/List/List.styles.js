@@ -1,5 +1,4 @@
 import { css, apply, screen } from 'twind/css'
-import { above } from '~/styles/breakpoints'
 
 export const __list = (row, size) => css`
   ${apply`
@@ -7,14 +6,14 @@ export const __list = (row, size) => css`
     flex-${row ? 'row' : 'col'}
     flex-wrap
     ${row && 'items-start'}
-    p-2
+    -mx-2
   `};
 
   .list {
     &__item {
       width: ${row ? size.sm : 100}%;
       ${apply`
-        flex-grow flex-shrink-0
+        flex-grow-0 flex-shrink-0
         p-2
 			`};
 

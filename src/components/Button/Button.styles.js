@@ -1,17 +1,17 @@
 import { css, apply } from 'twind/css'
+import { _mutable } from '../../styles/mixins'
 
-export const __button = (primary) => {
-  const theme = primary ? 'blue' : 'purple'
+export const __button = ({ full = false } = {}) => css`
+  ${_mutable}
 
-  return css`
-    ${apply`
-      py-2
-      px-4
-      bg-${theme}-500 hover:bg-${theme}-700
-      shadow-md hover:shadow-sm
-      rounded
-      text-white
-    `};
-    text-decoration: ${primary ? 'none' : 'underline'};
-  `
-}
+  ${apply`
+    ${full ? 'w-full block' : 'inline-block'}
+    py-2
+    px-4
+    rounded
+    transform
+    transition-all
+
+    hover:(shadow-md scale-105 -translate-y-1)
+  `};
+`

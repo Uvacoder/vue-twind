@@ -3,7 +3,7 @@ import { defineComponent, h } from 'vue'
 
 import { __list } from './List.styles'
 
-const SIZE = {
+const SIZES = {
   sm: 1 / 1,
   md: 1 / 2,
   lg: 1 / 3,
@@ -19,20 +19,20 @@ export default defineComponent({
         return ~['column', 'row'].indexOf(value)
       },
     },
-    size: {
+    sizes: {
       type: Object,
-      default: SIZE,
+      default: SIZES,
     },
   },
   render() {
     const slots = this.$slots.default()
     const list = []
     const row = this.direction === 'row'
-    const size = {
-      sm: this.size.sm ? this.size.sm * 100 : SIZE.sm * 100,
-      md: this.size.md ? this.size.md * 100 : SIZE.md * 100,
-      lg: this.size.lg ? this.size.lg * 100 : SIZE.lg * 100,
-      xl: this.size.xl ? this.size.xl * 100 : SIZE.xl * 100,
+    const sizes = {
+      sm: this.sizes.sm ? this.sizes.sm * 100 : SIZES.sm * 100,
+      md: this.sizes.md ? this.sizes.md * 100 : SIZES.md * 100,
+      lg: this.sizes.lg ? this.sizes.lg * 100 : SIZES.lg * 100,
+      xl: this.sizes.xl ? this.sizes.xl * 100 : SIZES.xl * 100,
     }
 
     slots.forEach((slot) => {
@@ -48,7 +48,7 @@ export default defineComponent({
     return h(
       'ul',
       {
-        class: ['list', this.$tw(__list(row, size))],
+        class: ['list', this.$tw(__list(row, sizes))],
       },
       list.map((element) =>
         h(

@@ -8,15 +8,15 @@ export const __typography = css`
   }
 
   .text-hero {
-    ${apply`mb-3 text-6xl`};
+    ${apply`text-6xl`};
   }
 
   .text-title {
-    ${apply`mb-2 text-5xl`};
+    ${apply`text-5xl`};
   }
 
   .text-subtitle {
-    ${apply`mb-1 text-3xl`};
+    ${apply`text-3xl`};
   }
 
   .text-highlight {

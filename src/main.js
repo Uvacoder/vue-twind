@@ -1,19 +1,34 @@
 import { createApp } from 'vue'
 import { setup } from 'twind/shim'
 import { tw } from 'twind'
-import App from './App.vue'
+import { breakpoints } from './styles/variables'
+import { px } from './utils/px'
+import App from './components/App/App.vue'
 
 setup({
   purge: ['./index.html', './src/**/*.{vue,js,jsx}'],
-  darkMode: false,
+  darkMode: 'class',
   mode: 'silent',
   theme: {
-    extend: {},
+    screens: {
+      sm: px(breakpoints.sm),
+      md: px(breakpoints.md),
+      lg: px(breakpoints.lg),
+      xl: px(breakpoints.xl),
+      '2xl': px(breakpoints['2xl']),
+    },
+    extend: {
+      backgroundColor: {
+        primary: '#F3F4F6',
+        secondary: '#374151',
+        tertiary: '#CCCCCC',
+        quaternary: '#333333',
+      },
+      transitionProperty: {
+        transform: 'transform, top, right, bottom, left',
+      },
+    },
   },
-  variants: {
-    extend: {},
-  },
-  plugins: [],
 })
 
 const app = createApp(App)
