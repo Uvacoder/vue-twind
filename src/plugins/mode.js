@@ -1,5 +1,5 @@
 export const load = () => {
-  const filled = localStorage.theme.length
+  const filled = localStorage.theme && localStorage.theme.length
   const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
   const dark = filled ? localStorage.theme === 'dark' : prefersDark
 

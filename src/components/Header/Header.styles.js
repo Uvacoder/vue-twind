@@ -16,8 +16,8 @@ export const __header = css`
 
       ${apply`
         h-24
-        px-4
-        py-2
+        px-6
+        py-4
         mt-4
         shadow-lg
         rounded-lg
