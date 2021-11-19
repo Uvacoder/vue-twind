@@ -20,9 +20,11 @@
 
     <h2 class="mt-10 text-title">Buttons</h2>
 
-    <List :sizes="sizes">
-      <Button>Text</Button>
-      <Button full>Text</Button>
+    <List :sizes="sizes" direction="column">
+      <Button>Normal Button</Button>
+      <Button full
+        >Full Button with <strong class="text-bold">Bold</strong> Text</Button
+      >
     </List>
   </div>
 </template>

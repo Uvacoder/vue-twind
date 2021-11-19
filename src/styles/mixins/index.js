@@ -5,11 +5,7 @@ export const _mutable = ({ invert = false, border = true } = {}) => {
     light: invert ? 'secondary' : 'primary',
     dark: invert ? 'primary' : 'secondary',
   }
-  const borders = {
-    light: invert ? 'quaternary' : 'tertiary',
-    dark: invert ? 'tertiary' : 'quaternary',
-  }
-  const text = {
+  const color = {
     light: invert ? 'white' : 'black',
     dark: invert ? 'black' : 'white',
   }
@@ -20,15 +16,16 @@ export const _mutable = ({ invert = false, border = true } = {}) => {
       ${
         border &&
         `
-        border-1
-        border-${borders.light}
-      `
+          border-1
+          border-current
+        `
       }
-      text-${text.light}
+      text-${color.light}
 
-      dark:(bg-${background.dark} ${border && `border-${borders.dark}`} text-${
-      text.dark
-    })
+      dark:(
+        bg-${background.dark}
+        text-${color.dark}
+      )
     `}
   `
 }

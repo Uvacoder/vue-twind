@@ -1,4 +1,4 @@
-import { css, apply } from 'twind/css'
+import { css, apply, screen } from 'twind/css'
 
 export const __logo = css`
   ${apply`
@@ -11,6 +11,17 @@ export const __logo = css`
         w-full
         h-full
       `}
+
+      &__text {
+        ${apply`hidden`}
+
+        ${screen(
+          'md',
+          css`
+            ${apply`block`}
+          `
+        )}
+      }
     }
   }
 `

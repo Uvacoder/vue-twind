@@ -3,7 +3,7 @@ import { setup } from 'twind/shim'
 import { tw } from 'twind'
 import { breakpoints } from './styles/variables'
 import { px } from './utils/px'
-import App from './components/App/App.vue'
+import App from '~/layouts/App/App.vue'
 
 setup({
   purge: ['./index.html', './src/**/*.{vue,js,jsx}'],
