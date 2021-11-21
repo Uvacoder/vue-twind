@@ -1,8 +1,8 @@
 import { css, apply } from 'twind/css'
-import { _mutable } from '../../styles/mixins'
+import { _mutable } from '~/styles/mixins'
 
 export const __button = ({ full = false } = {}) => css`
-  ${_mutable}
+  ${_mutable()}
 
   ${apply`
     ${full ? 'w-full block' : 'inline-block'}

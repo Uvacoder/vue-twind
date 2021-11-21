@@ -26,6 +26,8 @@ setup({
       },
       transitionProperty: {
         transform: 'transform, top, right, bottom, left',
+        radius:
+          'border-top-left-radius, border-top-right-radius, border-bottom-right-radius, border-bottom-left-radius',
       },
     },
   },

@@ -22,9 +22,18 @@
 
     <List :sizes="sizes" direction="column">
       <Button>Normal Button</Button>
-      <Button full
-        >Full Button with <strong class="text-bold">Bold</strong> Text</Button
-      >
+      <Button full>Full Button with <strong class="text-bold">Bold</strong> Text</Button>
+    </List>
+
+    <h2 class="mt-10 text-title">Accordions</h2>
+
+    <List :sizes="sizes">
+      <Accordion v-for="item in 9" :key="item" title="Accordion">
+        Lorem ipsum dolor sit amet consectetur <b class="font-bold">adipisicing elit</b>. Vitae
+        ratione, est error distinctio optio sequi temporibus enim quidem ut ad,
+        <b class="font-bold">tempora pariatur</b> assumenda nemo nulla sapiente fugiat quia, vel
+        voluptatem!
+      </Accordion>
     </List>
   </div>
 </template>
@@ -35,6 +44,7 @@ import Header from '~/components/Header/Header.vue'
 import List from '~/components/List/List.vue'
 import Card from '~/components/Card/Card.vue'
 import Button from '~/components/Button/Button.vue'
+import Accordion from '~/components/Accordion/Accordion.vue'
 import { load } from '~/plugins/mode'
 import { cards } from './App.data'
 

@@ -1,5 +1,5 @@
 import { css, apply } from 'twind/css'
-import { _mutable } from '../../mixins'
+import { _mutable } from '~/styles/mixins'
 
 export const __reset = css`
   body {
