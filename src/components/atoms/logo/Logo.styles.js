@@ -8,8 +8,7 @@ export const __logo = css`
   .logo {
     &__icon {
       ${apply`
-        w-full
-        h-full
+        w-full h-full
       `}
 
       &__text {

@@ -6,8 +6,7 @@ export const __button = ({ full = false } = {}) => css`
 
   ${apply`
     ${full ? 'w-full block' : 'inline-block'}
-    py-2
-    px-4
+    px-4 py-2
     rounded
     transform
     transition-all

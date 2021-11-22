@@ -2,9 +2,7 @@ import { css, apply, screen } from 'twind/css'
 
 export const __list = (row, size) => css`
   ${apply`
-    flex
-    flex-${row ? 'row' : 'col'}
-    flex-wrap
+    flex flex-${row ? 'row' : 'col'} flex-wrap
     ${row && 'items-start'}
     -mx-2
   `};

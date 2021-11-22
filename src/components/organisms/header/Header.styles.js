@@ -4,9 +4,7 @@ import { _theme } from '~/styles/mixins'
 export const __header = css`
   ${apply`
     w-full
-    fixed
-    top-0
-    left-0
+    fixed top-0 left-0
     z-20
   `}
 
@@ -16,14 +14,10 @@ export const __header = css`
 
       ${apply`
         h-24
-        px-6
-        py-4
+        flex items-center justify-between
+        px-6 py-4
         mt-4
-        shadow-lg
-        rounded-lg
-        flex
-        items-center
-        justify-between
+        shadow-lg rounded-lg
       `}
     }
   }

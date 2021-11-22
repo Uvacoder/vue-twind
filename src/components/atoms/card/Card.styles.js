@@ -13,10 +13,9 @@ export const __card = css`
   .card {
     &__icon {
       ${apply`
-        w-10
-        h-10
-        self-end
+        w-10 h-10
         mt-5
+        self-end
       `};
     }
   }
@@ -27,9 +26,7 @@ export const __front = (children) => css`
   ${_side}
 
   ${apply`
-    flex
-    flex-col
-    justify-between
+    flex flex-col justify-between
     relative
     z-10
 
@@ -43,8 +40,7 @@ export const __back = (children) => css`
 
   ${apply`
     -left-3
-    -translate-x-full
-    translate-y-3
+    -translate-x-full translate-y-3
 
     ${children && `group-hover:(left-0 -translate-x-full -translate-y-0)`}
   `};

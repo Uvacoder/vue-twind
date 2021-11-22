@@ -7,9 +7,9 @@ export const __global = css`
       ${_theme({ border: false })}
 
       ${apply`
-      pt-28
-      transition-colors
-    `};
+        pt-28
+        transition-colors
+      `};
     }
   }
 `
