@@ -1,6 +1,6 @@
 import { css, apply } from 'twind/css'
 
-export const _mutable = ({ invert = false, border = true } = {}) => {
+export const _theme = ({ invert = false, border = true } = {}) => {
   const background = {
     light: invert ? 'secondary' : 'primary',
     dark: invert ? 'primary' : 'secondary',

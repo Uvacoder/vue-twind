@@ -3,5 +3,5 @@
 </template>
 
 <script setup>
-import { __global } from '~/styles/global'
+import { __global } from './Global.styles'
 </script>

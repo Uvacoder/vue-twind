@@ -30,11 +30,11 @@
 </template>
 
 <script setup>
-import Global from '~/components/Global/Global.vue'
-import Header from '~/components/Header/Header.vue'
-import List from '~/components/List/List.vue'
-import Card from '~/components/Card/Card.vue'
-import Button from '~/components/Button/Button.vue'
+import Global from '~/components/organisms/global/Global.vue'
+import Header from '~/components/organisms/header/Header.vue'
+import List from '~/components/molecules/list/List.vue'
+import Card from '~/components/atoms/card/Card.vue'
+import Button from '~/components/atoms/button/Button.vue'
 import { load } from '~/plugins/mode'
 import { cards } from './App.data'
 

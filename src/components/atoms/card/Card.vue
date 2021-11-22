@@ -19,7 +19,7 @@
 
 <script setup>
 import { useSlots } from 'vue'
-import Icon from '~/components/Icon/Icon.vue'
+import Icon from '~/components/atoms/icon/Icon.vue'
 
 import { __card, __front, __back } from './Card.styles'
 

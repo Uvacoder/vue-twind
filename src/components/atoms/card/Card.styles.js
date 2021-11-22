@@ -1,5 +1,5 @@
 import { css, apply } from 'twind/css'
-import { _mutable, _side } from '~/styles/mixins'
+import { _theme, _side } from '~/styles/mixins'
 
 export const __card = css`
   ${apply`
@@ -23,7 +23,7 @@ export const __card = css`
 `
 
 export const __front = (children) => css`
-  ${_mutable()}
+  ${_theme()}
   ${_side}
 
   ${apply`
@@ -38,7 +38,7 @@ export const __front = (children) => css`
 `
 
 export const __back = (children) => css`
-  ${_mutable({ invert: true })}
+  ${_theme({ invert: true })}
   ${_side}
 
   ${apply`

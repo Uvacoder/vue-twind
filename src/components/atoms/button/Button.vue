@@ -5,7 +5,7 @@
 </template>
 
 <script setup>
-import { __button } from './Button.styles.js'
+import { __button } from './Button.styles'
 
 const props = defineProps({
   full: {

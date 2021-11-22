@@ -11,8 +11,8 @@
 </template>
 
 <script setup>
-import Logo from '~/components/Logo/Logo.vue'
-import Mode from '~/components/Mode/Mode.vue'
+import Logo from '~/components/atoms/logo/Logo.vue'
+import Mode from '~/components/atoms/mode/Mode.vue'
 
 import { __header } from './Header.styles'
 </script>

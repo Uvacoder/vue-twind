@@ -6,7 +6,7 @@
 
 <script setup>
 import { ref, computed } from 'vue'
-import Icon from '~/components/Icon/Icon.vue'
+import Icon from '~/components/atoms/icon/Icon.vue'
 
 import { __mode } from './Mode.styles'
 

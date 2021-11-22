@@ -1,5 +1,5 @@
 import { css, apply } from 'twind/css'
-import { _mutable } from '~/styles/mixins'
+import { _theme } from '~/styles/mixins'
 
 export const __header = css`
   ${apply`
@@ -12,7 +12,7 @@ export const __header = css`
 
   .header {
     &__content {
-      ${_mutable()}
+      ${_theme()}
 
       ${apply`
         h-24
