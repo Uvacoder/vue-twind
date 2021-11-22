@@ -14,6 +14,6 @@ export const __button = ({ full = false } = {}) => css`
 
     hover:(shadow-md scale-105 -translate-y-1)
 
-    focus:(outline-none ring-none)
+    focus:(outline-none)
   `};
 `
