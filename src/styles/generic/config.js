@@ -1,5 +1,5 @@
 import { __breakpoints, __colors } from '~/styles/tools/variables'
-import { __utilities } from '~/styles/tools/utilities'
+import { __utilities } from '~/styles/generic/utilities'
 
 export const __config = {
   purge: ['./index.html', './src/**/*.{vue,js,jsx}'],
