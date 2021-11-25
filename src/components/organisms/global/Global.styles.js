@@ -1,5 +1,5 @@
 import { css, apply } from 'twind/css'
-import { _theme } from '~/styles/mixins'
+import { _theme } from '~/styles/tools/mixins'
 
 export const __global = css`
   :global {

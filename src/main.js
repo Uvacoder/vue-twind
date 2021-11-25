@@ -4,7 +4,7 @@ import { tw } from 'twind'
 
 import App from '~/layouts/App/App.vue'
 
-import { __config } from '~/styles/config'
+import { __config } from '~/styles/generic/config'
 
 setup(__config)
 

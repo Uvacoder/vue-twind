@@ -1,5 +1,5 @@
 import { css, apply } from 'twind/css'
-import { _theme, _side } from '~/styles/mixins'
+import { _theme, _side } from '~/styles/tools/mixins'
 
 export const __card = css`
   ${apply`
